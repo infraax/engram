@@ -1,0 +1,86 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ENGRAM runtime data
+results/absolute/
+*.eng
+*.faiss
+*.meta.json
+index_c.db
+
+# Test/build artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# One-off scripts (not part of the library)
+step1.py
+USAGE.md
+
+# Claude session data
+.claude/
+
+# Credentials & secrets (NEVER commit)
+Cred.md
+*.secret
+*.token
+
+# Paper build artifacts (PDF generated from source)
+paper/engram.pdf
+paper/*.png
+paper/*.pdf
+paper/preview_*
+
+# Docs — internal planning, outreach, audit (not for public repo)
+docs/OUTREACH_EMAIL.md
+docs/LAUNCH_PLAN.md
+docs/DEEPSEEK_ENGRAM_ANALYSIS.md
+docs/AUDIT_CHECKPOINT.md
+docs/PAPER_PLAN.md
+docs/PAPER_STRUCTURE.md
+docs/annon.md
+docs/compass_artifact_*.md
+
+# Results — raw data, checkpoints, large files
+results/absolute/
+results/stress/
+results/raw/
+results/eigengrams/
+results/summary/
+results/paper/
+results/figures/
+results/*.pt
+results/*.json
+data/corpus_200.jsonl
+
+# Large data files
+*.pt
+*.safetensors
