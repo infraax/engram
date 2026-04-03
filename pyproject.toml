@@ -3,14 +3,14 @@ requires = ["hatchling>=1.21.0"]
 build-backend = "hatchling.build"
 
 [project]
-name = "engram-protocol"
-version = "0.1.0"
-description = "ENGRAM Protocol — KV cache fingerprinting for persistent semantic retrieval."
+name = "engram-kv"
+version = "1.0.0"
+description = "KV cache fingerprinting for persistent cross-session LLM memory. Fourier decomposition achieves 98% Recall@1 at 51µs."
 readme = "README.md"
 license = "Apache-2.0"
 requires-python = ">=3.11"
-authors = []
-keywords = ["engram", "kv-cache", "llm", "inference", "quantization", "retrieval", "cognitive-state"]
+authors = [{name = "ENIGMA"}]
+keywords = ["engram", "kv-cache", "llm", "inference", "fourier", "fingerprint", "retrieval", "hnsw", "cross-model", "session-memory"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
@@ -93,7 +93,8 @@ engram-server = "kvcos.api.server:main"
 engram-demo = "scripts.demo_agent_session:main"
 
 [project.urls]
-Repository = "https://github.com/engram-protocol/engram"
+Repository = "https://github.com/infraax/engram"
+Documentation = "https://github.com/infraax/engram#readme"
 
 [tool.hatch.build.targets.wheel]
 packages = ["kvcos"]
