@@ -1,0 +1,48 @@
+{
+  "name": "engram-kv-mcp",
+  "version": "1.0.0",
+  "description": "TypeScript client for ENGRAM session memory MCP server. KV cache fingerprinting for persistent cross-session LLM memory.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "engram",
+    "mcp",
+    "kv-cache",
+    "llm",
+    "session-memory",
+    "fingerprint",
+    "fourier",
+    "retrieval",
+    "claude",
+    "model-context-protocol"
+  ],
+  "author": "ENIGMA",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/infraax/engram"
+  },
+  "homepage": "https://github.com/infraax/engram#readme",
+  "bugs": {
+    "url": "https://github.com/infraax/engram/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}
