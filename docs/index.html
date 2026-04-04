@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ENGRAM: Cross-model document retrieval via intrinsic KV cache geometry. Fourier fingerprinting of transformer attention — no training, no adapters, no model modification.">
+  <meta property="og:title" content="ENGRAM — KV Cache Fingerprinting Protocol">
+  <meta property="og:description" content="Cross-model document retrieval via intrinsic KV cache geometry. 98% Recall@1, 51us latency, 800 bytes per document.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://infraax.github.io/engram/">
+  <title>ENGRAM</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500&display=swap');
+    * { box-sizing: border-box; margin: 0; }
+    html, body { background: #fafafa; color: #1d1d1f; min-height: 100vh; overflow-x: hidden; }
+    body { font-family: 'Inter', -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+    /* ── Stage: editorial engine section ── */
+    #stage {
+      position: relative; width: 100vw; height: 100vh; overflow: hidden;
+      background: #000; color: #e8e8e8;
+    }
+    .line {
+      position: absolute; white-space: pre; z-index: 1;
+      user-select: text; -webkit-user-select: text;
+    }
+    .headline-line {
+      position: absolute; white-space: pre;
+      font-weight: 800; color: #fff; letter-spacing: -1px; z-index: 2;
+      user-select: text; -webkit-user-select: text;
+    }
+    .pullquote-line {
+      position: absolute; white-space: pre;
+      font-style: normal; color: rgba(255,255,255,0.35); z-index: 2;
+      user-select: text; -webkit-user-select: text;
+    }
+    .pullquote-box {
+      position: absolute; pointer-events: none; z-index: 3;
+      border-left: 2px solid rgba(255,255,255,0.12); padding-left: 14px;
+    }
+    .orb {
+      position: absolute; border-radius: 50%; pointer-events: none; z-index: 10;
+      will-change: transform;
+    }
+    .hint {
+      position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+      font: 400 12px/1 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.2); z-index: 100;
+      background: rgba(0,0,0,0.6); padding: 8px 18px; border-radius: 999px;
+      pointer-events: none; white-space: nowrap; letter-spacing: 0.5px;
+    }
+
+    /* ── Manifold canvas ── */
+    #manifold-section {
+      position: relative;
+      background: #000;
+      padding: 0;
+    }
+    #manifold-canvas {
+      display: block; width: 100%; height: 70vh;
+      cursor: crosshair;
+    }
+    .manifold-overlay {
+      position: absolute; top: 40px; left: 48px; z-index: 5;
+      pointer-events: none;
+    }
+    .manifold-overlay h2 {
+      font: 200 clamp(32px, 5vw, 56px)/1.05 'Inter', sans-serif;
+      color: #fff; letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+    .manifold-overlay p {
+      font: 300 14px/1.6 'Inter', sans-serif;
+      color: rgba(255,255,255,0.3);
+      max-width: 360px;
+    }
+    .manifold-legend {
+      position: absolute; bottom: 32px; right: 48px; z-index: 5;
+      pointer-events: none;
+      display: flex; gap: 20px;
+    }
+    .legend-item {
+      display: flex; align-items: center; gap: 6px;
+      font: 400 11px/1 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.35);
+    }
+    .legend-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+    }
+
+    /* ── White sections ── */
+    .white-section {
+      background: #fafafa;
+      padding: clamp(60px, 10vw, 120px) clamp(24px, 5vw, 80px);
+    }
+    .dark-section {
+      background: #000; color: #e8e8e8;
+      padding: clamp(60px, 10vw, 120px) clamp(24px, 5vw, 80px);
+    }
+    .section-inner { max-width: 980px; margin: 0 auto; }
+
+    .section-eyebrow {
+      font: 500 11px/1 'JetBrains Mono', monospace;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: #86868b;
+      margin-bottom: 12px;
+    }
+    .dark-section .section-eyebrow { color: rgba(255,255,255,0.25); }
+
+    .section-heading {
+      font: 700 clamp(28px, 4.5vw, 52px)/1.08 'Inter', sans-serif;
+      letter-spacing: -1px;
+      color: #1d1d1f;
+      margin-bottom: 16px;
+    }
+    .dark-section .section-heading { color: #f5f5f7; }
+
+    .section-body {
+      font: 300 clamp(15px, 1.8vw, 19px)/1.7 'Inter', sans-serif;
+      color: #86868b;
+      max-width: 600px;
+    }
+    .dark-section .section-body { color: rgba(255,255,255,0.4); }
+
+    /* ── Pipeline ── */
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1px;
+      margin-top: 48px;
+      background: rgba(0,0,0,0.06);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .dark-section .pipeline { background: rgba(255,255,255,0.04); }
+
+    .pipe-stage {
+      padding: 28px 16px;
+      background: #fafafa;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .dark-section .pipe-stage { background: rgba(255,255,255,0.02); }
+    .pipe-stage:hover { background: #f0f0f0; }
+    .dark-section .pipe-stage:hover { background: rgba(255,255,255,0.05); }
+
+    .pipe-num {
+      font: 500 10px/1 'JetBrains Mono', monospace;
+      color: #86868b; letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    .pipe-name {
+      font: 600 14px/1.3 'Inter', sans-serif;
+      color: #1d1d1f;
+      margin-bottom: 6px;
+    }
+    .dark-section .pipe-name { color: #f5f5f7; }
+
+    .pipe-detail {
+      font: 400 11px/1.4 'JetBrains Mono', monospace;
+      color: #86868b;
+    }
+    .pipe-badge {
+      display: inline-block; margin-top: 10px;
+      padding: 3px 10px; border-radius: 20px;
+      font: 500 9px/1 'JetBrains Mono', monospace;
+      letter-spacing: 1px;
+    }
+    .badge-h { background: rgba(52,199,89,0.1); color: #34c759; }
+    .badge-m { background: rgba(255,159,10,0.1); color: #ff9f0a; }
+    .badge-l { background: rgba(94,92,230,0.1); color: #5e5ce6; }
+
+    /* ── Metrics row ── */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1px;
+      margin-top: 48px;
+      background: rgba(0,0,0,0.06);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .dark-section .metrics-row { background: rgba(255,255,255,0.04); }
+
+    .metric-cell {
+      padding: 28px 16px;
+      background: #fafafa;
+      text-align: center;
+    }
+    .dark-section .metric-cell { background: rgba(255,255,255,0.02); }
+
+    .metric-val {
+      font: 700 clamp(24px, 3vw, 36px)/1 'JetBrains Mono', monospace;
+      color: #1d1d1f;
+      margin-bottom: 6px;
+    }
+    .dark-section .metric-val { color: #f5f5f7; }
+
+    .metric-lbl {
+      font: 400 11px/1 'Inter', sans-serif;
+      color: #86868b; text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ── Arch grid ── */
+    .arch-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 36px;
+      background: rgba(0,0,0,0.06);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .arch-cell {
+      padding: 24px;
+      background: #fafafa;
+      text-align: center;
+    }
+    .arch-cell:hover { background: #f0f0f0; }
+    .arch-name { font: 600 16px/1 'Inter', sans-serif; color: #1d1d1f; margin-bottom: 4px; }
+    .arch-sub { font: 400 11px/1 'JetBrains Mono', monospace; color: #86868b; }
+
+    /* ── Install ── */
+    .install-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 36px;
+    }
+    .install-card {
+      padding: 24px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+    }
+    .install-label {
+      font: 500 10px/1 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 2px; margin-bottom: 12px;
+    }
+    .install-cmd {
+      font: 400 15px/1.6 'JetBrains Mono', monospace;
+      color: #f5f5f7;
+      user-select: all;
+    }
+
+    /* ── Fourier canvas ── */
+    #fourier-canvas {
+      display: block; width: 100%; height: 220px;
+      margin-top: 48px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+
+    /* ── Footer ── */
+    .footer {
+      background: #000; text-align: center;
+      padding: 48px 24px;
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+    .footer-brand {
+      font: 700 14px/1 'Inter', sans-serif;
+      color: rgba(255,255,255,0.1); letter-spacing: 10px;
+      margin-bottom: 16px;
+    }
+    .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+    .footer-links a {
+      font: 400 12px/1 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.25); text-decoration: none;
+    }
+    .footer-links a:hover { color: #f5f5f7; }
+    .footer-doi {
+      margin-top: 16px;
+      font: 400 11px/1 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.12);
+    }
+
+    @media (max-width: 760px) {
+      .pipeline { grid-template-columns: 1fr; }
+      .arch-grid { grid-template-columns: 1fr 1fr; }
+      .manifold-overlay { left: 24px; top: 24px; }
+      .manifold-legend { right: 24px; bottom: 16px; flex-direction: column; gap: 8px; }
+      .hint { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ Act I: The Stage — editorial engine with text flowing around orbs ═══ -->
+  <div id="stage">
+    <div class="hint">Drag the orbs. Text reflows in real time. Zero DOM reads.</div>
+  </div>
+
+  <!-- ═══ Act II: The Manifold — interactive latent space ═══ -->
+  <section id="manifold-section">
+    <div class="manifold-overlay">
+      <h2>Latent Space</h2>
+      <p>200 documents. 10 domains. Each point is a Fourier fingerprint. Click to query. Watch the geodesic path trace.</p>
+    </div>
+    <canvas id="manifold-canvas"></canvas>
+    <div class="manifold-legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#fff"></div> Query</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#34c759"></div> Match</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#ff3b30"></div> Negative</div>
+      <div class="legend-item"><div class="legend-dot" style="background:rgba(255,255,255,0.15)"></div> Corpus</div>
+    </div>
+  </section>
+
+  <!-- ═══ Performance ═══ -->
+  <section class="white-section">
+    <div class="section-inner">
+      <p class="section-eyebrow">Performance</p>
+      <h2 class="section-heading">The numbers speak.</h2>
+      <p class="section-body">No training. No adapters. No model modification. Just Fourier decomposition of what the model already computes.</p>
+      <div class="metrics-row">
+        <div class="metric-cell"><div class="metric-val">98%</div><div class="metric-lbl">Recall@1</div></div>
+        <div class="metric-cell"><div class="metric-val">51us</div><div class="metric-lbl">HNSW Latency</div></div>
+        <div class="metric-cell"><div class="metric-val">5.7x</div><div class="metric-lbl">Speedup</div></div>
+        <div class="metric-cell"><div class="metric-val">800B</div><div class="metric-lbl">Per Document</div></div>
+        <div class="metric-cell"><div class="metric-val">0.975</div><div class="metric-lbl">CKA Within</div></div>
+        <div class="metric-cell"><div class="metric-val">220</div><div class="metric-lbl">Tests</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Pipeline ═══ -->
+  <section class="white-section" style="padding-top:0">
+    <div class="section-inner">
+      <p class="section-eyebrow">Retrieval</p>
+      <h2 class="section-heading">Four stages. One geodesic.</h2>
+      <p class="section-body">Each query traces a path through the retrieval manifold. Confidence accumulates. Ambiguity resolves.</p>
+      <div class="pipeline">
+        <div class="pipe-stage">
+          <div class="pipe-num">STAGE 0</div>
+          <div class="pipe-name">Prior Preemption</div>
+          <div class="pipe-detail">IndexC history</div>
+          <span class="pipe-badge badge-h">SKIP</span>
+        </div>
+        <div class="pipe-stage">
+          <div class="pipe-num">STAGE 1</div>
+          <div class="pipe-name">HNSW Search</div>
+          <div class="pipe-detail">faiss M=32</div>
+          <span class="pipe-badge badge-h">HIGH</span>
+        </div>
+        <div class="pipe-stage">
+          <div class="pipe-num">STAGE 2</div>
+          <div class="pipe-name">Trajectory</div>
+          <div class="pipe-detail">w=0.3 interp</div>
+          <span class="pipe-badge badge-m">MED</span>
+        </div>
+        <div class="pipe-stage">
+          <div class="pipe-num">STAGE 3</div>
+          <div class="pipe-name">Negatives</div>
+          <div class="pipe-detail">Apophatic</div>
+          <span class="pipe-badge badge-l">LOW</span>
+        </div>
+        <div class="pipe-stage">
+          <div class="pipe-num">STAGE 4</div>
+          <div class="pipe-name">Disambig</div>
+          <div class="pipe-detail">Metadata</div>
+          <span class="pipe-badge badge-l">STAGE4</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Architecture ═══ -->
+  <section class="white-section" style="padding-top:0">
+    <div class="section-inner">
+      <p class="section-eyebrow">Architectures</p>
+      <h2 class="section-heading">Six families. One geometry.</h2>
+      <p class="section-body">CKA isomorphism: 0.975 within-family, 0.927 cross-family. The manifold is intrinsic to the transformer, not the training.</p>
+      <div class="arch-grid">
+        <div class="arch-cell"><div class="arch-name">Llama</div><div class="arch-sub">MHA 1B-70B</div></div>
+        <div class="arch-cell"><div class="arch-name">Gemma</div><div class="arch-sub">MHA 2B-27B</div></div>
+        <div class="arch-cell"><div class="arch-name">Gemma 4</div><div class="arch-sub">ISWA dual-cache</div></div>
+        <div class="arch-cell"><div class="arch-name">Phi</div><div class="arch-sub">MHA 3.8B</div></div>
+        <div class="arch-cell"><div class="arch-name">Qwen</div><div class="arch-sub">GQA 1.8-72B</div></div>
+        <div class="arch-cell"><div class="arch-name">Mistral</div><div class="arch-sub">GQA + sliding</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Fourier + Install ═══ -->
+  <section class="dark-section">
+    <div class="section-inner">
+      <p class="section-eyebrow">Fingerprint</p>
+      <h2 class="section-heading" style="color:#f5f5f7">f<sub style="font-size:0.6em">0</sub> + f<sub style="font-size:0.6em">1</sub></h2>
+      <p class="section-body">The DC component captures mean activation. The first harmonic captures oscillation. Together: a deterministic signature of what the model attended to.</p>
+      <canvas id="fourier-canvas"></canvas>
+    </div>
+  </section>
+
+  <section class="dark-section" style="padding-top:0">
+    <div class="section-inner">
+      <p class="section-eyebrow">Install</p>
+      <h2 class="section-heading" style="color:#f5f5f7">Get started.</h2>
+      <div class="install-row">
+        <div class="install-card">
+          <div class="install-label">PYTHON</div>
+          <div class="install-cmd">pip install engram-kv</div>
+        </div>
+        <div class="install-card">
+          <div class="install-label">NODE</div>
+          <div class="install-cmd">npm i engram-kv-mcp</div>
+        </div>
+        <div class="install-card">
+          <div class="install-label">SOURCE</div>
+          <div class="install-cmd">git clone github.com/infraax/engram</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-brand">ENGRAM</div>
+    <div class="footer-links">
+      <a href="https://github.com/infraax/engram">GitHub</a>
+      <a href="https://pypi.org/project/engram-kv/">PyPI</a>
+      <a href="https://www.npmjs.com/package/engram-kv-mcp">npm</a>
+      <a href="https://huggingface.co/Engram-protocol/engram">HuggingFace</a>
+      <a href="https://doi.org/10.5281/zenodo.19409362">Zenodo</a>
+    </div>
+    <div class="footer-doi">DOI 10.5281/zenodo.19409362</div>
+  </footer>
+
+  <script type="module" src="./engram.js"></script>
+</body>
+</html>
