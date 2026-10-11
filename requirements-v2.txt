@@ -1,0 +1,15 @@
+# ENGRAM v2 research harness (engram_core, engram_bench, scripts/v2).
+# Versions used for the 2026-10-11 M0 runs (TUF, CUDA 12.6). Install torch for your platform first.
+# NOTE: v1's pyproject pins numpy<2 and safetensors<0.5, which conflict with transformers 5.
+#       Install v1 with `pip install -e . --no-deps` (see docs/v2/DECISION_LOG.md D-004).
+torch>=2.14
+transformers>=5.19,<6
+accelerate>=1.15
+safetensors>=0.8
+numpy>=2.5
+datasets>=5.1
+huggingface_hub>=1.33
+sentence-transformers>=6.1
+faiss-cpu>=1.15
+blake3>=1.0
+pytest>=8

@@ -1,5 +1,14 @@
 # ENGRAM Protocol
 
+> [!IMPORTANT]
+> **Status, October 2026: v1 headline claims corrected.** A re-evaluation on a public benchmark against text-embedding baselines (branch `v2`, milestone M0) found:
+> - The "Recall@1 100 % / 98 %" result measured **identity matching of the same text**, not semantic retrieval.
+> - On BEIR SciFact, KV-cache fingerprints reach nDCG@10 **0.25** vs **0.71** for a 33 M-parameter text embedder.
+> - The v1 Fourier fingerprint is dominated by a shared offset: unrelated documents sit at cos 0.94 – 0.98.
+>
+> What holds: the KV fingerprint is a robust **identity / dedup / restore key**. ENGRAM v2 repositions around that, plus a portable, verifiable KV-state certificate.
+> **Read [`docs/v2/FINDINGS.md`](docs/v2/FINDINGS.md)** for the claim-by-claim status, the error register and reproduction steps. The text below is the original v1 README, kept for reference.
+
 KV cache fingerprinting for persistent cross-session semantic retrieval.
 
 ENGRAM extracts Fourier fingerprints from LLM KV caches, stores them as compact binary certificates (`.eng` files), and retrieves them via HNSW approximate nearest neighbor search. This enables cross-session memory, semantic deduplication, and KV cache restoration for large language models.

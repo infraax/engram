@@ -1,0 +1,40 @@
+{
+  "run_id": "20261011T061229-base-minilm-c200-paraphrase-9c90d36c1879",
+  "name": "base-minilm-c200-paraphrase",
+  "utc": "2026-10-11T06:12:29.270992+00:00",
+  "git_sha": "d45273e9653f365f84b022f266d9c2c4166d9de3",
+  "git_dirty": true,
+  "branch": "v2",
+  "host": "tuf",
+  "platform": "Linux-6.8.0-146-generic-x86_64-with-glibc2.39",
+  "config_hash": "9c90d36c1879",
+  "config": {
+    "task": "baseline",
+    "sense": "meaning_text",
+    "embedder": "sentence-transformers/all-MiniLM-L6-v2",
+    "dataset": "c200-paraphrase",
+    "synthetic_queries": true
+  },
+  "metrics": {
+    "retrieval": {
+      "R@1": 0.99,
+      "R@5": 1.0,
+      "R@10": 1.0,
+      "MRR@10": 0.995,
+      "nDCG@10": 0.9963092975357145,
+      "margin_mean": 0.4098087774217129,
+      "margin_median": 0.43047136068344116,
+      "margin_p10": 0.24663355946540833,
+      "n_queries": 200,
+      "n_docs": 200
+    },
+    "offset": {
+      "pair_cos_mean": 0.06246936693787575,
+      "pair_abs_cos_mean": 0.08051905781030655,
+      "pair_cos_p99": 0.34592941403388977
+    },
+    "encode_s": 0.16,
+    "dims": 384
+  },
+  "extra": {}
+}

@@ -79,7 +79,7 @@ results/paper/
 results/figures/
 results/*.pt
 results/*.json
-data/corpus_200.jsonl
+# data/corpus_200.jsonl is tracked since v2 (needed to reproduce M0)
 
 # Large data files
 *.pt

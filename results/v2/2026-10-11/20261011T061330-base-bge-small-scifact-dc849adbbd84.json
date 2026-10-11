@@ -1,0 +1,40 @@
+{
+  "run_id": "20261011T061330-base-bge-small-scifact-dc849adbbd84",
+  "name": "base-bge-small-scifact",
+  "utc": "2026-10-11T06:13:30.976164+00:00",
+  "git_sha": "d45273e9653f365f84b022f266d9c2c4166d9de3",
+  "git_dirty": true,
+  "branch": "v2",
+  "host": "tuf",
+  "platform": "Linux-6.8.0-146-generic-x86_64-with-glibc2.39",
+  "config_hash": "dc849adbbd84",
+  "config": {
+    "task": "baseline",
+    "sense": "meaning_text",
+    "embedder": "BAAI/bge-small-en-v1.5",
+    "dataset": "scifact",
+    "synthetic_queries": false
+  },
+  "metrics": {
+    "retrieval": {
+      "R@1": 0.59,
+      "R@5": 0.7833333333333333,
+      "R@10": 0.84,
+      "MRR@10": 0.6725211640211638,
+      "nDCG@10": 0.7056756050898952,
+      "margin_mean": 0.01451537827650706,
+      "margin_median": 0.016612708568572998,
+      "margin_p10": -0.0736678659915924,
+      "n_queries": 300,
+      "n_docs": 5183
+    },
+    "offset": {
+      "pair_cos_mean": 0.6266788840293884,
+      "pair_abs_cos_mean": 0.6266788840293884,
+      "pair_cos_p99": 0.763790488243103
+    },
+    "encode_s": 38.79,
+    "dims": 384
+  },
+  "extra": {}
+}

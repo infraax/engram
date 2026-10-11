@@ -1,0 +1,200 @@
+{"domain": "computer_science", "text": "A B-tree is a self-balancing search tree that maintains sorted data and allows efficient insertion, deletion, and search.", "cache_id": "doc_000"}
+{"domain": "general_world", "text": "Urbanization is the process by which populations migrate from rural areas to cities in search of economic opportunity.", "cache_id": "doc_001"}
+{"domain": "history", "text": "The Silk Road was a network of trade routes connecting China to the Mediterranean, carrying goods and ideas for centuries.", "cache_id": "doc_002"}
+{"domain": "general_world", "text": "The periodic table organizes all known elements by atomic number and groups them by chemical properties.", "cache_id": "doc_003"}
+{"domain": "history", "text": "The Ottoman Empire ruled much of Southeast Europe, Western Asia, and North Africa for over six centuries.", "cache_id": "doc_004"}
+{"domain": "language_arts", "text": "The sonnet is a 14-line poetic form developed in Italy and popularized in English by Shakespeare and Spenser.", "cache_id": "doc_005"}
+{"domain": "ml_systems", "text": "Constitutional AI aligns models using a set of principles that guide both supervised fine-tuning and RL from AI feedback.", "cache_id": "doc_006"}
+{"domain": "ml_systems", "text": "RLHF fine-tunes language models using human preference data collected by ranking model outputs against each other.", "cache_id": "doc_007"}
+{"domain": "computer_science", "text": "The Unix philosophy favors small programs that do one thing well and communicate via text streams.", "cache_id": "doc_008"}
+{"domain": "mathematics", "text": "Topology studies properties of spaces that are preserved under continuous deformations such as stretching and bending.", "cache_id": "doc_009"}
+{"domain": "language_arts", "text": "Dialect captures regional or social variations in vocabulary, grammar, and pronunciation within a language.", "cache_id": "doc_010"}
+{"domain": "philosophy", "text": "The hard problem of consciousness distinguishes explaining behavior from explaining subjective first-person experience.", "cache_id": "doc_011"}
+{"domain": "language_arts", "text": "The hero journey is a narrative archetype in which a protagonist leaves home, faces trials, and returns transformed.", "cache_id": "doc_012"}
+{"domain": "computer_science", "text": "Concurrency control in databases uses locking or optimistic versioning to prevent anomalies from interleaved transactions.", "cache_id": "doc_013"}
+{"domain": "medicine", "text": "Inflammatory response is a protective reaction to injury or infection involving vasodilation and immune cell recruitment.", "cache_id": "doc_014"}
+{"domain": "philosophy", "text": "Plato allegory of the cave describes prisoners who mistake shadows on a wall for the true nature of reality.", "cache_id": "doc_015"}
+{"domain": "mathematics", "text": "The central limit theorem states that the mean of many independent samples tends toward a normal distribution.", "cache_id": "doc_016"}
+{"domain": "language_arts", "text": "Haiku is a Japanese poetic form of three lines with five, seven, and five syllables respectively.", "cache_id": "doc_017"}
+{"domain": "biology", "text": "The blood-brain barrier restricts passage of substances from the bloodstream into the central nervous system.", "cache_id": "doc_018"}
+{"domain": "ml_systems", "text": "Tokenization maps raw Unicode text to integer token sequences using byte-pair encoding trained on large text corpora.", "cache_id": "doc_019"}
+{"domain": "medicine", "text": "Organ transplantation requires immunosuppressive drugs to prevent the host immune system from rejecting the donor tissue.", "cache_id": "doc_020"}
+{"domain": "ml_systems", "text": "Rotary position embeddings encode token position by rotating query and key vectors in the complex plane.", "cache_id": "doc_021"}
+{"domain": "mathematics", "text": "Fourier analysis decomposes any periodic function into a sum of sinusoidal components of different frequencies.", "cache_id": "doc_022"}
+{"domain": "language_arts", "text": "Stream of consciousness is a narrative technique that represents the continuous flow of a character thoughts.", "cache_id": "doc_023"}
+{"domain": "general_world", "text": "The global food supply depends on a small number of staple crops including wheat, rice, maize, and soybeans.", "cache_id": "doc_024"}
+{"domain": "philosophy", "text": "Utilitarianism holds that the morally right action is the one that produces the greatest good for the greatest number.", "cache_id": "doc_025"}
+{"domain": "mathematics", "text": "Differential equations describe how quantities change with respect to one another, modeling physical and biological systems.", "cache_id": "doc_026"}
+{"domain": "history", "text": "The Cold War was a geopolitical rivalry between the United States and Soviet Union from 1947 to 1991.", "cache_id": "doc_027"}
+{"domain": "ml_systems", "text": "Layer normalization stabilizes training by normalizing each token representation to zero mean and unit variance.", "cache_id": "doc_028"}
+{"domain": "general_world", "text": "Ocean currents regulate global climate by redistributing heat from tropical to polar regions.", "cache_id": "doc_029"}
+{"domain": "biology", "text": "Muscle contraction occurs when myosin motor proteins walk along actin filaments powered by ATP hydrolysis.", "cache_id": "doc_030"}
+{"domain": "language_arts", "text": "Narrative tension arises from the gap between what a reader knows and what a character knows in a story.", "cache_id": "doc_031"}
+{"domain": "ml_systems", "text": "Chain-of-thought prompting improves model reasoning by encouraging intermediate step generation before final answers.", "cache_id": "doc_032"}
+{"domain": "biology", "text": "Cell apoptosis is a programmed self-destruction process that removes damaged or unnecessary cells without inflammation.", "cache_id": "doc_033"}
+{"domain": "medicine", "text": "Antimicrobial resistance arises when pathogens evolve mechanisms to survive exposure to drugs that previously killed them.", "cache_id": "doc_034"}
+{"domain": "computer_science", "text": "Garbage collection automatically reclaims memory by identifying objects that are no longer reachable from the program.", "cache_id": "doc_035"}
+{"domain": "computer_science", "text": "Recursion solves a problem by reducing it to smaller instances of the same problem until a base case terminates.", "cache_id": "doc_036"}
+{"domain": "general_world", "text": "Photography captures light on a sensor or film to preserve a moment in time as a two-dimensional image.", "cache_id": "doc_037"}
+{"domain": "biology", "text": "Telomeres protect chromosome ends from degradation and shorten with each cell division, contributing to aging.", "cache_id": "doc_038"}
+{"domain": "philosophy", "text": "The veil of ignorance is a thought experiment asking what principles people would choose if they did not know their place in society.", "cache_id": "doc_039"}
+{"domain": "philosophy", "text": "Nihilism holds that life lacks inherent meaning, value, or purpose beyond what individuals project onto it.", "cache_id": "doc_040"}
+{"domain": "computer_science", "text": "A hash table maps keys to values using a hash function to index into a fixed-size array for constant time lookup.", "cache_id": "doc_041"}
+{"domain": "ml_systems", "text": "KV cache stores previously computed key and value projections to avoid recomputation during autoregressive generation.", "cache_id": "doc_042"}
+{"domain": "medicine", "text": "Cancer arises when mutations disable cell cycle checkpoints, allowing uncontrolled division and invasion.", "cache_id": "doc_043"}
+{"domain": "philosophy", "text": "Epistemology studies the nature, scope, and limits of human knowledge and justified belief.", "cache_id": "doc_044"}
+{"domain": "mathematics", "text": "Stochastic processes model systems that evolve over time with probabilistic transitions between states.", "cache_id": "doc_045"}
+{"domain": "language_arts", "text": "Rhetoric is the art of persuasion using logos, ethos, and pathos to influence an audience.", "cache_id": "doc_046"}
+{"domain": "history", "text": "The Mongol Empire was the largest contiguous land empire in history, founded by Genghis Khan in the 13th century.", "cache_id": "doc_047"}
+{"domain": "computer_science", "text": "Compilers translate high-level source code to machine instructions through lexing, parsing, semantic analysis, and code generation.", "cache_id": "doc_048"}
+{"domain": "history", "text": "The American Revolution established the first modern democratic republic based on Enlightenment political philosophy.", "cache_id": "doc_049"}
+{"domain": "history", "text": "The Renaissance was a cultural movement centered in Italy that revived classical learning and produced new art and science.", "cache_id": "doc_050"}
+{"domain": "physics", "text": "Acoustic waves are mechanical pressure oscillations that propagate through a medium at a speed determined by its elasticity.", "cache_id": "doc_051"}
+{"domain": "history", "text": "The Industrial Revolution transformed manufacturing from hand production to machine-based factory production in Britain.", "cache_id": "doc_052"}
+{"domain": "medicine", "text": "Insulin is a peptide hormone produced by the pancreas that regulates blood glucose uptake in cells.", "cache_id": "doc_053"}
+{"domain": "mathematics", "text": "A group is an algebraic structure with a set and binary operation satisfying closure, associativity, identity, and inverse.", "cache_id": "doc_054"}
+{"domain": "ml_systems", "text": "Attention mechanisms use query key and value matrices to compute weighted context aggregation across all token positions.", "cache_id": "doc_055"}
+{"domain": "philosophy", "text": "The problem of consciousness asks how and why physical processes in the brain give rise to subjective experience.", "cache_id": "doc_056"}
+{"domain": "general_world", "text": "Sports competitions reflect cultural values around excellence, fairness, teamwork, and national or community identity.", "cache_id": "doc_057"}
+{"domain": "ml_systems", "text": "Grouped query attention reduces KV cache size by sharing key and value heads across multiple query heads.", "cache_id": "doc_058"}
+{"domain": "physics", "text": "Quantum mechanics describes physical systems using wave functions whose squared amplitudes give measurement probabilities.", "cache_id": "doc_059"}
+{"domain": "history", "text": "The French Revolution dismantled the monarchy and aristocracy, establishing republican principles that spread across Europe.", "cache_id": "doc_060"}
+{"domain": "biology", "text": "The gut microbiome influences metabolism, immunity, and neural function through chemical signaling pathways.", "cache_id": "doc_061"}
+{"domain": "medicine", "text": "Palliative care focuses on relieving suffering and improving quality of life rather than curing underlying disease.", "cache_id": "doc_062"}
+{"domain": "philosophy", "text": "Determinism holds that every event is causally necessitated by prior events and the laws of nature.", "cache_id": "doc_063"}
+{"domain": "language_arts", "text": "The epistolary novel is told through documents such as letters, diary entries, or messages exchanged by characters.", "cache_id": "doc_064"}
+{"domain": "computer_science", "text": "The actor model represents concurrent computation as actors that communicate exclusively by passing asynchronous messages.", "cache_id": "doc_065"}
+{"domain": "history", "text": "The ancient Greeks developed democracy, philosophy, and scientific inquiry that formed the foundation of Western thought.", "cache_id": "doc_066"}
+{"domain": "ml_systems", "text": "The scaling law states that model performance improves predictably with more compute tokens and parameters.", "cache_id": "doc_067"}
+{"domain": "ml_systems", "text": "Quantization reduces model size by representing weights in lower precision formats such as 4-bit integers.", "cache_id": "doc_068"}
+{"domain": "philosophy", "text": "Phenomenology studies the structures of conscious experience from the first-person perspective.", "cache_id": "doc_069"}
+{"domain": "medicine", "text": "The placebo effect demonstrates that patient beliefs and expectations can produce measurable physiological changes.", "cache_id": "doc_070"}
+{"domain": "philosophy", "text": "Ethics of care emphasizes relationships and responsibilities over abstract universal principles in moral reasoning.", "cache_id": "doc_071"}
+{"domain": "computer_science", "text": "Public key cryptography uses a pair of mathematically related keys where data encrypted with one can only be decrypted by the other.", "cache_id": "doc_072"}
+{"domain": "physics", "text": "The standard model of particle physics describes fundamental particles and three of the four known fundamental forces.", "cache_id": "doc_073"}
+{"domain": "philosophy", "text": "Existentialism holds that existence precedes essence and that individuals create their own meaning through choices.", "cache_id": "doc_074"}
+{"domain": "mathematics", "text": "Linear algebra studies vector spaces and linear transformations between them, including matrices and eigendecompositions.", "cache_id": "doc_075"}
+{"domain": "history", "text": "World War One was triggered by the assassination of Archduke Franz Ferdinand and ended four empires.", "cache_id": "doc_076"}
+{"domain": "computer_science", "text": "Bloom filters use multiple hash functions to probabilistically test set membership with no false negatives.", "cache_id": "doc_077"}
+{"domain": "mathematics", "text": "The singular value decomposition factors any matrix into orthogonal rotations and a diagonal scaling matrix.", "cache_id": "doc_078"}
+{"domain": "general_world", "text": "Democracy requires free elections, rule of law, protection of minority rights, and freedom of expression to function.", "cache_id": "doc_079"}
+{"domain": "physics", "text": "Black holes are regions of spacetime where gravity is so strong that not even light can escape the event horizon.", "cache_id": "doc_080"}
+{"domain": "history", "text": "The Holocaust was the genocide of six million Jews and millions of others by Nazi Germany during World War Two.", "cache_id": "doc_081"}
+{"domain": "history", "text": "Ancient Egypt built the pyramids as royal tombs over a period spanning more than a thousand years along the Nile.", "cache_id": "doc_082"}
+{"domain": "language_arts", "text": "The unreliable narrator is a narrative device in which the storyteller account cannot be taken at face value.", "cache_id": "doc_083"}
+{"domain": "medicine", "text": "Vaccines stimulate the immune system to produce antibodies by presenting antigens from a pathogen.", "cache_id": "doc_084"}
+{"domain": "biology", "text": "Synaptic plasticity is the ability of synapses to strengthen or weaken over time in response to activity.", "cache_id": "doc_085"}
+{"domain": "ml_systems", "text": "Model distillation transfers knowledge from a large teacher model to a smaller student via soft target supervision.", "cache_id": "doc_086"}
+{"domain": "medicine", "text": "Antibiotics kill or inhibit bacterial growth by targeting structures absent in human cells such as cell walls.", "cache_id": "doc_087"}
+{"domain": "language_arts", "text": "The passive voice shifts grammatical focus from actor to object and is used to depersonalize or emphasize outcomes.", "cache_id": "doc_088"}
+{"domain": "philosophy", "text": "The Socratic method uses systematic questioning to expose contradictions in beliefs and guide toward deeper understanding.", "cache_id": "doc_089"}
+{"domain": "computer_science", "text": "Git tracks changes to files by storing a directed acyclic graph of content-addressed commit objects.", "cache_id": "doc_090"}
+{"domain": "physics", "text": "Electromagnetism is unified in Maxwell four equations relating electric and magnetic fields to charges and currents.", "cache_id": "doc_091"}
+{"domain": "medicine", "text": "Epidemiology studies the distribution and determinants of disease in populations to guide public health interventions.", "cache_id": "doc_092"}
+{"domain": "history", "text": "The Roman Empire at its height stretched from Britain to Mesopotamia and unified them under Roman law and Latin.", "cache_id": "doc_093"}
+{"domain": "medicine", "text": "Dialysis replaces kidney function by filtering waste and excess fluid from the blood of patients with renal failure.", "cache_id": "doc_094"}
+{"domain": "computer_science", "text": "A RESTful API uses HTTP methods and resource-oriented URLs to create a stateless client-server interface.", "cache_id": "doc_095"}
+{"domain": "biology", "text": "Evolution by natural selection favors heritable traits that increase reproductive fitness in a given environment.", "cache_id": "doc_096"}
+{"domain": "general_world", "text": "Architecture shapes human experience by defining the spaces in which people live, work, worship, and gather.", "cache_id": "doc_097"}
+{"domain": "history", "text": "The Black Death killed roughly one third of Europe population between 1347 and 1351, reshaping its society.", "cache_id": "doc_098"}
+{"domain": "mathematics", "text": "Convex optimization finds the global minimum of a convex objective function over a convex feasible set.", "cache_id": "doc_099"}
+{"domain": "philosophy", "text": "Philosophical zombies are hypothetical beings physically identical to humans but with no inner conscious experience.", "cache_id": "doc_100"}
+{"domain": "ml_systems", "text": "Residual connections in deep networks allow gradients to flow directly from output layers back to early input layers.", "cache_id": "doc_101"}
+{"domain": "biology", "text": "Epigenetic modifications alter gene expression without changing the underlying DNA sequence.", "cache_id": "doc_102"}
+{"domain": "general_world", "text": "Language is the primary medium through which humans transmit culture, coordinate behavior, and construct shared reality.", "cache_id": "doc_103"}
+{"domain": "physics", "text": "Optical fibers transmit light by total internal reflection, enabling high-bandwidth communication over long distances.", "cache_id": "doc_104"}
+{"domain": "physics", "text": "Gravitational waves are ripples in spacetime caused by accelerating massive objects, first detected in 2015.", "cache_id": "doc_105"}
+{"domain": "language_arts", "text": "Magical realism blends realistic settings with fantastical elements treated as ordinary within the narrative world.", "cache_id": "doc_106"}
+{"domain": "language_arts", "text": "Etymology traces the historical origin and evolution of words across languages and time periods.", "cache_id": "doc_107"}
+{"domain": "general_world", "text": "The Sahara is the world largest hot desert, covering most of North Africa and characterized by extreme aridity.", "cache_id": "doc_108"}
+{"domain": "language_arts", "text": "Translation involves not just converting words but conveying cultural context, tone, and connotation across languages.", "cache_id": "doc_109"}
+{"domain": "philosophy", "text": "The nature versus nurture debate asks how much of human behavior is determined by genetics versus environment.", "cache_id": "doc_110"}
+{"domain": "language_arts", "text": "Metaphor transfers meaning from one conceptual domain to another to illuminate ideas that resist literal description.", "cache_id": "doc_111"}
+{"domain": "biology", "text": "The kidney filters blood plasma to regulate electrolyte balance and remove metabolic waste products as urine.", "cache_id": "doc_112"}
+{"domain": "mathematics", "text": "Graph theory studies networks of nodes and edges, providing tools for routing, scheduling, and social network analysis.", "cache_id": "doc_113"}
+{"domain": "philosophy", "text": "Pragmatism evaluates beliefs by their practical consequences rather than their correspondence to abstract truth.", "cache_id": "doc_114"}
+{"domain": "language_arts", "text": "The bildungsroman is a coming-of-age novel tracing the psychological and moral growth of its protagonist.", "cache_id": "doc_115"}
+{"domain": "medicine", "text": "The heart pumps blood through systemic and pulmonary circulations to deliver oxygen and remove carbon dioxide.", "cache_id": "doc_116"}
+{"domain": "language_arts", "text": "Alliteration is the repetition of initial consonant sounds in closely connected words for rhythmic or rhetorical effect.", "cache_id": "doc_117"}
+{"domain": "language_arts", "text": "Irony occurs when the literal meaning of language contradicts its intended or contextual meaning.", "cache_id": "doc_118"}
+{"domain": "biology", "text": "Protein synthesis begins with transcription where RNA polymerase copies a DNA template into messenger RNA.", "cache_id": "doc_119"}
+{"domain": "physics", "text": "General relativity models gravity as the curvature of spacetime caused by the presence of mass and energy.", "cache_id": "doc_120"}
+{"domain": "computer_science", "text": "Kubernetes orchestrates containerized workloads by scheduling pods onto nodes and managing scaling and health checks.", "cache_id": "doc_121"}
+{"domain": "ml_systems", "text": "Flash attention reduces memory complexity from quadratic to linear by tiling the attention computation across SRAM blocks.", "cache_id": "doc_122"}
+{"domain": "physics", "text": "The second law of thermodynamics states that the entropy of an isolated system can never decrease over time.", "cache_id": "doc_123"}
+{"domain": "philosophy", "text": "The ship of Theseus asks whether an object that has had all its components replaced remains fundamentally the same object.", "cache_id": "doc_124"}
+{"domain": "history", "text": "The Dutch Golden Age in the 17th century made the Netherlands a global center of trade, science, and art.", "cache_id": "doc_125"}
+{"domain": "physics", "text": "Semiconductors have electrical conductivity between conductors and insulators, tunable by doping with impurities.", "cache_id": "doc_126"}
+{"domain": "computer_science", "text": "The CAP theorem states that distributed systems can guarantee at most two of consistency, availability, and partition tolerance.", "cache_id": "doc_127"}
+{"domain": "mathematics", "text": "Category theory unifies mathematical structures by focusing on the morphisms between objects rather than the objects themselves.", "cache_id": "doc_128"}
+{"domain": "physics", "text": "Lasers produce coherent light by stimulated emission of photons in a gain medium between two mirrors.", "cache_id": "doc_129"}
+{"domain": "physics", "text": "Chaos theory studies systems that are highly sensitive to initial conditions, making long-term prediction impossible.", "cache_id": "doc_130"}
+{"domain": "mathematics", "text": "The Riemann hypothesis states that all non-trivial zeros of the zeta function have real part equal to one half.", "cache_id": "doc_131"}
+{"domain": "physics", "text": "Superconductors carry electrical current with zero resistance below a critical temperature due to Cooper pair formation.", "cache_id": "doc_132"}
+{"domain": "history", "text": "The Islamic Golden Age from the 8th to 14th centuries preserved and advanced mathematics, astronomy, and medicine.", "cache_id": "doc_133"}
+{"domain": "general_world", "text": "Sleep is a biological necessity during which the brain consolidates memories, clears metabolic waste, and repairs tissue.", "cache_id": "doc_134"}
+{"domain": "medicine", "text": "mRNA vaccines instruct cells to produce an antigen that trains the immune system without using live pathogen.", "cache_id": "doc_135"}
+{"domain": "biology", "text": "The immune system distinguishes self from non-self using major histocompatibility complex molecules on cell surfaces.", "cache_id": "doc_136"}
+{"domain": "general_world", "text": "The Netherlands is a low-lying country in Northwestern Europe known for its extensive system of dikes and windmills.", "cache_id": "doc_137"}
+{"domain": "medicine", "text": "Surgical anesthesia combines sedation, analgesia, and muscle relaxation to allow pain-free procedures.", "cache_id": "doc_138"}
+{"domain": "computer_science", "text": "Load balancing distributes incoming requests across multiple servers to prevent any single server from becoming a bottleneck.", "cache_id": "doc_139"}
+{"domain": "mathematics", "text": "Information theory quantifies the minimum bits needed to represent data using Shannon entropy.", "cache_id": "doc_140"}
+{"domain": "medicine", "text": "Cognitive behavioral therapy restructures maladaptive thought patterns to treat anxiety and depression.", "cache_id": "doc_141"}
+{"domain": "ml_systems", "text": "Continual pre-training adapts a general model to a new domain by further training on domain-specific text.", "cache_id": "doc_142"}
+{"domain": "mathematics", "text": "Bayesian inference updates prior beliefs about parameters using likelihood functions derived from observed data.", "cache_id": "doc_143"}
+{"domain": "physics", "text": "Dark matter is an invisible form of matter inferred from gravitational effects on visible matter and light.", "cache_id": "doc_144"}
+{"domain": "computer_science", "text": "SQL uses set-based declarative queries that the database engine optimizes using query planning and index selection.", "cache_id": "doc_145"}
+{"domain": "medicine", "text": "The blood-brain barrier selectively restricts which molecules can pass from the bloodstream into the brain.", "cache_id": "doc_146"}
+{"domain": "biology", "text": "DNA encodes genetic information in sequences of four nucleotide bases: adenine, thymine, guanine, and cytosine.", "cache_id": "doc_147"}
+{"domain": "physics", "text": "The Doppler effect is the change in observed frequency of a wave due to relative motion between source and observer.", "cache_id": "doc_148"}
+{"domain": "biology", "text": "Viruses are acellular agents that replicate by hijacking host cell machinery to produce copies of their genome.", "cache_id": "doc_149"}
+{"domain": "language_arts", "text": "Symbolism assigns deeper thematic meaning to objects, characters, or events beyond their literal function in a text.", "cache_id": "doc_150"}
+{"domain": "history", "text": "The Space Race between the US and USSR culminated in the Apollo 11 moon landing in July 1969.", "cache_id": "doc_151"}
+{"domain": "ml_systems", "text": "Speculative decoding uses a small draft model to propose tokens that a large model verifies in parallel.", "cache_id": "doc_152"}
+{"domain": "computer_science", "text": "Docker containers package an application with its dependencies into an isolated environment that runs on any host.", "cache_id": "doc_153"}
+{"domain": "physics", "text": "Nuclear fusion powers stars by combining light atomic nuclei into heavier ones and releasing binding energy.", "cache_id": "doc_154"}
+{"domain": "physics", "text": "The uncertainty principle states that position and momentum cannot both be known simultaneously with arbitrary precision.", "cache_id": "doc_155"}
+{"domain": "biology", "text": "Mitochondria generate ATP through oxidative phosphorylation driven by an electrochemical proton gradient.", "cache_id": "doc_156"}
+{"domain": "physics", "text": "Plasma is a high-energy state of matter in which electrons are stripped from atoms to form an ionized gas.", "cache_id": "doc_157"}
+{"domain": "general_world", "text": "The sun is a G-type main-sequence star at the center of the solar system with a surface temperature of 5,500 degrees Celsius.", "cache_id": "doc_158"}
+{"domain": "general_world", "text": "Currency is a medium of exchange whose value is maintained by institutional trust and legal tender laws.", "cache_id": "doc_159"}
+{"domain": "physics", "text": "Quantum entanglement is a phenomenon where measuring one particle instantly affects the state of a correlated partner.", "cache_id": "doc_160"}
+{"domain": "general_world", "text": "The Amazon river carries more water than any other river on Earth and drains roughly 40 percent of South America.", "cache_id": "doc_161"}
+{"domain": "biology", "text": "RNA splicing removes introns and joins exons to produce mature mRNA ready for ribosomal translation.", "cache_id": "doc_162"}
+{"domain": "philosophy", "text": "Free will is the capacity to act according to one own choices in a manner not fully determined by prior causes.", "cache_id": "doc_163"}
+{"domain": "physics", "text": "The Higgs boson is the excitation of the Higgs field which gives mass to fundamental particles via the Higgs mechanism.", "cache_id": "doc_164"}
+{"domain": "general_world", "text": "Music is organized sound that exploits pitch, rhythm, and timbre to produce emotional and aesthetic responses.", "cache_id": "doc_165"}
+{"domain": "mathematics", "text": "A prime number is a natural number greater than one with exactly two divisors: one and itself.", "cache_id": "doc_166"}
+{"domain": "ml_systems", "text": "Gradient descent optimizes parameters by computing the gradient of a scalar loss with respect to all trainable weights.", "cache_id": "doc_167"}
+{"domain": "computer_science", "text": "Functional programming treats computation as evaluation of mathematical functions with no mutable state.", "cache_id": "doc_168"}
+{"domain": "medicine", "text": "Statins reduce cardiovascular risk by inhibiting HMG-CoA reductase, the enzyme that drives cholesterol synthesis.", "cache_id": "doc_169"}
+{"domain": "history", "text": "Colonialism by European powers reshaped Africa, Asia, and the Americas through exploitation and cultural displacement.", "cache_id": "doc_170"}
+{"domain": "mathematics", "text": "Complex analysis extends calculus to functions of complex numbers, revealing deep connections via Cauchy theorem.", "cache_id": "doc_171"}
+{"domain": "history", "text": "The abolition of slavery in the United States followed the Civil War and was formalized by the 13th Amendment in 1865.", "cache_id": "doc_172"}
+{"domain": "general_world", "text": "Diplomacy is the practice of managing international relations through negotiation rather than force or coercion.", "cache_id": "doc_173"}
+{"domain": "philosophy", "text": "The trolley problem is a moral thought experiment that tests intuitions about killing one to save many.", "cache_id": "doc_174"}
+{"domain": "mathematics", "text": "The traveling salesman problem asks for the shortest route visiting all cities exactly once, and is NP-hard.", "cache_id": "doc_175"}
+{"domain": "medicine", "text": "MRI imaging uses strong magnetic fields and radio waves to produce detailed images of soft tissue.", "cache_id": "doc_176"}
+{"domain": "general_world", "text": "Inflation is the rate at which the general level of prices for goods and services rises over time.", "cache_id": "doc_177"}
+{"domain": "medicine", "text": "The liver metabolizes drugs, hormones, and toxins using cytochrome P450 enzymes for detoxification and excretion.", "cache_id": "doc_178"}
+{"domain": "language_arts", "text": "Linguistics distinguishes syntax, the rules of sentence structure, from semantics, the study of meaning.", "cache_id": "doc_179"}
+{"domain": "mathematics", "text": "Godel incompleteness theorem shows that any consistent formal system contains true statements it cannot prove.", "cache_id": "doc_180"}
+{"domain": "mathematics", "text": "Modular arithmetic studies integers under equivalence relations defined by a fixed modulus divisor.", "cache_id": "doc_181"}
+{"domain": "biology", "text": "Neurons transmit signals electrochemically using action potentials that propagate along myelinated axons.", "cache_id": "doc_182"}
+{"domain": "ml_systems", "text": "LoRA reduces fine-tuning memory cost by decomposing weight updates into two small low-rank matrices.", "cache_id": "doc_183"}
+{"domain": "ml_systems", "text": "Mixture of experts routes each token to a subset of specialized feed-forward layers using a learned gating network.", "cache_id": "doc_184"}
+{"domain": "history", "text": "The printing press invented by Gutenberg in the 15th century democratized knowledge by making books affordable.", "cache_id": "doc_185"}
+{"domain": "medicine", "text": "Gene therapy delivers corrective genetic material into patient cells to treat hereditary diseases.", "cache_id": "doc_186"}
+{"domain": "biology", "text": "CRISPR-Cas9 creates targeted double-strand breaks in DNA that can be repaired to insert or delete gene sequences.", "cache_id": "doc_187"}
+{"domain": "language_arts", "text": "Prosody is the study of meter, rhythm, and intonation in poetry and their effects on meaning and feeling.", "cache_id": "doc_188"}
+{"domain": "philosophy", "text": "Stoicism teaches that tranquility is achieved by distinguishing what is within our control from what is not.", "cache_id": "doc_189"}
+{"domain": "biology", "text": "Photosynthesis converts light energy into chemical energy stored in glucose using chlorophyll pigments in chloroplasts.", "cache_id": "doc_190"}
+{"domain": "general_world", "text": "Climate change is driven by the accumulation of greenhouse gases in the atmosphere, primarily from fossil fuel combustion.", "cache_id": "doc_191"}
+{"domain": "biology", "text": "Hormone signaling uses chemical messengers released into the bloodstream to regulate distant organ function.", "cache_id": "doc_192"}
+{"domain": "mathematics", "text": "Game theory models strategic interactions between rational agents and identifies equilibrium strategies.", "cache_id": "doc_193"}
+{"domain": "computer_science", "text": "TCP establishes reliable connections using a three-way handshake before transmitting any application data.", "cache_id": "doc_194"}
+{"domain": "computer_science", "text": "Virtual memory gives each process the illusion of contiguous address space mapped to physical RAM by the OS.", "cache_id": "doc_195"}
+{"domain": "general_world", "text": "The internet is a global network of interconnected computers that enables communication, commerce, and information sharing.", "cache_id": "doc_196"}
+{"domain": "ml_systems", "text": "The transformer architecture processes all tokens in parallel using self-attention rather than recurrent sequential state.", "cache_id": "doc_197"}
+{"domain": "biology", "text": "Stem cells are undifferentiated cells capable of self-renewal and differentiation into specialized cell types.", "cache_id": "doc_198"}
+{"domain": "philosophy", "text": "Kant categorical imperative demands acting only according to principles you could will to become universal laws.", "cache_id": "doc_199"}

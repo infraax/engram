@@ -1,0 +1,40 @@
+{
+  "run_id": "20261011T061252-base-bge-small-c200-paraphrase-0a429df44e40",
+  "name": "base-bge-small-c200-paraphrase",
+  "utc": "2026-10-11T06:12:52.178733+00:00",
+  "git_sha": "d45273e9653f365f84b022f266d9c2c4166d9de3",
+  "git_dirty": true,
+  "branch": "v2",
+  "host": "tuf",
+  "platform": "Linux-6.8.0-146-generic-x86_64-with-glibc2.39",
+  "config_hash": "0a429df44e40",
+  "config": {
+    "task": "baseline",
+    "sense": "meaning_text",
+    "embedder": "BAAI/bge-small-en-v1.5",
+    "dataset": "c200-paraphrase",
+    "synthetic_queries": true
+  },
+  "metrics": {
+    "retrieval": {
+      "R@1": 1.0,
+      "R@5": 1.0,
+      "R@10": 1.0,
+      "MRR@10": 1.0,
+      "nDCG@10": 1.0,
+      "margin_mean": 0.19891808688640594,
+      "margin_median": 0.2058982253074646,
+      "margin_p10": 0.11907504200935365,
+      "n_queries": 200,
+      "n_docs": 200
+    },
+    "offset": {
+      "pair_cos_mean": 0.4944673776626587,
+      "pair_abs_cos_mean": 0.4944673776626587,
+      "pair_cos_p99": 0.6910855770111084
+    },
+    "encode_s": 0.27,
+    "dims": 384
+  },
+  "extra": {}
+}

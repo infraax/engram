@@ -1,0 +1,84 @@
+{
+  "run_id": "20261011T061251-base-bge-small-c200-question-d2ca74ae668f",
+  "name": "base-bge-small-c200-question",
+  "utc": "2026-10-11T06:12:51.898164+00:00",
+  "git_sha": "d45273e9653f365f84b022f266d9c2c4166d9de3",
+  "git_dirty": true,
+  "branch": "v2",
+  "host": "tuf",
+  "platform": "Linux-6.8.0-146-generic-x86_64-with-glibc2.39",
+  "config_hash": "d2ca74ae668f",
+  "config": {
+    "task": "baseline",
+    "sense": "meaning_text",
+    "embedder": "BAAI/bge-small-en-v1.5",
+    "dataset": "c200-question",
+    "synthetic_queries": true
+  },
+  "metrics": {
+    "retrieval": {
+      "R@1": 0.975,
+      "R@5": 1.0,
+      "R@10": 1.0,
+      "MRR@10": 0.986,
+      "nDCG@10": 0.9895528591076017,
+      "margin_mean": 0.16116597533226013,
+      "margin_median": 0.16854998469352722,
+      "margin_p10": 0.08769187331199646,
+      "n_queries": 200,
+      "n_docs": 200
+    },
+    "offset": {
+      "pair_cos_mean": 0.4944673776626587,
+      "pair_abs_cos_mean": 0.4944673776626587,
+      "pair_cos_p99": 0.6910855770111084
+    },
+    "encode_s": 0.29,
+    "dims": 384,
+    "stability": {
+      "lead_newline": {
+        "self_cos_mean": 1.0,
+        "self_cos_min": 0.9999998807907104,
+        "id_R@1": 1.0,
+        "id_margin_mean": 0.2904524505138397
+      },
+      "lead_space": {
+        "self_cos_mean": 1.0,
+        "self_cos_min": 0.9999998807907104,
+        "id_R@1": 1.0,
+        "id_margin_mean": 0.2904524505138397
+      },
+      "trail_newline": {
+        "self_cos_mean": 1.0,
+        "self_cos_min": 0.9999998807907104,
+        "id_R@1": 1.0,
+        "id_margin_mean": 0.2904524505138397
+      },
+      "prefix_note": {
+        "self_cos_mean": 0.9902509450912476,
+        "self_cos_min": 0.9706517457962036,
+        "id_R@1": 1.0,
+        "id_margin_mean": 0.2932792901992798
+      },
+      "prefix_long": {
+        "self_cos_mean": 0.9450337290763855,
+        "self_cos_min": 0.8831204175949097,
+        "id_R@1": 1.0,
+        "id_margin_mean": 0.27039700746536255
+      },
+      "typo": {
+        "self_cos_mean": 0.9671995639801025,
+        "self_cos_min": 0.8739404678344727,
+        "id_R@1": 1.0,
+        "id_margin_mean": 0.2636762261390686
+      },
+      "lowercase": {
+        "self_cos_mean": 1.0,
+        "self_cos_min": 0.9999998807907104,
+        "id_R@1": 1.0,
+        "id_margin_mean": 0.2904524505138397
+      }
+    }
+  },
+  "extra": {}
+}

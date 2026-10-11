@@ -1,0 +1,84 @@
+{
+  "run_id": "20261011T061229-base-minilm-c200-question-35e62c88555a",
+  "name": "base-minilm-c200-question",
+  "utc": "2026-10-11T06:12:29.072661+00:00",
+  "git_sha": "d45273e9653f365f84b022f266d9c2c4166d9de3",
+  "git_dirty": true,
+  "branch": "v2",
+  "host": "tuf",
+  "platform": "Linux-6.8.0-146-generic-x86_64-with-glibc2.39",
+  "config_hash": "35e62c88555a",
+  "config": {
+    "task": "baseline",
+    "sense": "meaning_text",
+    "embedder": "sentence-transformers/all-MiniLM-L6-v2",
+    "dataset": "c200-question",
+    "synthetic_queries": true
+  },
+  "metrics": {
+    "retrieval": {
+      "R@1": 0.97,
+      "R@5": 0.995,
+      "R@10": 1.0,
+      "MRR@10": 0.9807222222222223,
+      "nDCG@10": 0.9854033603180643,
+      "margin_mean": 0.34047942504286766,
+      "margin_median": 0.3578202724456787,
+      "margin_p10": 0.18901696801185608,
+      "n_queries": 200,
+      "n_docs": 200
+    },
+    "offset": {
+      "pair_cos_mean": 0.06246936693787575,
+      "pair_abs_cos_mean": 0.08051905781030655,
+      "pair_cos_p99": 0.34592941403388977
+    },
+    "encode_s": 0.46,
+    "dims": 384,
+    "stability": {
+      "lead_newline": {
+        "self_cos_mean": 1.0,
+        "self_cos_min": 0.9999998807907104,
+        "id_R@1": 1.0,
+        "id_margin_mean": 0.5848219990730286
+      },
+      "lead_space": {
+        "self_cos_mean": 1.0,
+        "self_cos_min": 0.9999998807907104,
+        "id_R@1": 1.0,
+        "id_margin_mean": 0.5848219990730286
+      },
+      "trail_newline": {
+        "self_cos_mean": 1.0,
+        "self_cos_min": 0.9999998807907104,
+        "id_R@1": 1.0,
+        "id_margin_mean": 0.5848219990730286
+      },
+      "prefix_note": {
+        "self_cos_mean": 0.9796649813652039,
+        "self_cos_min": 0.9246330261230469,
+        "id_R@1": 1.0,
+        "id_margin_mean": 0.5655049681663513
+      },
+      "prefix_long": {
+        "self_cos_mean": 0.8802127242088318,
+        "self_cos_min": 0.7375987768173218,
+        "id_R@1": 1.0,
+        "id_margin_mean": 0.49211516976356506
+      },
+      "typo": {
+        "self_cos_mean": 0.9233071208000183,
+        "self_cos_min": 0.6253310441970825,
+        "id_R@1": 1.0,
+        "id_margin_mean": 0.5165721774101257
+      },
+      "lowercase": {
+        "self_cos_mean": 1.0,
+        "self_cos_min": 0.9999998807907104,
+        "id_R@1": 1.0,
+        "id_margin_mean": 0.5848219990730286
+      }
+    }
+  },
+  "extra": {}
+}
